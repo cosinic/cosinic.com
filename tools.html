@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+    <title>Devtools | Cosinic</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="author" content="Cosinic">
+    <meta name="description" content="">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300|Rajdhani:300" rel="stylesheet">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Lato', sans-serif;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        body>div {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(0deg, #0f0c29 0%, #232526 50%, #434343 100%);
+        }
+
+        h1 {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: lighter;
+            margin: .3em 0;
+            font-size: 4em;
+        }
+
+        p {
+            margin: .5em 0;
+        }
+
+        a {
+            color: #0f9b0f;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div>
+
+        <h1>COSINIC</h1>
+        <p>
+		Dev Tools <br/><br />
+		<button type="button" id="button__useragent">User Agent</button>
+		<br />
+		<button type="button" id="button__vendor">Vendor</button>
+		<br />
+		<button type="button" id="button__window">New Window</button> 
+        </p>
+
+    </div>
+</body>
+
+<script type="text/javascript">
+
+window.onload = function() {
+	let button_ua = document.getElementById('button__useragent');
+	button_ua.addEventListener('click', function() { 
+		var ua = JSON.stringify(navigator.userAgent);
+		alert(ua);
+	});
+
+	let button_vendor = document.getElementById('button__vendor');
+	button_vendor.addEventListener('click', function() {
+		var vendor = JSON.stringify(navigator.vendor);
+		alert(vendor);
+	}); 
+
+	let button_window = document.getElementById('button__window');
+	button_window.addEventListener('click', function() {
+		window.open('//cosinic.com', '_blank',  "menubar=yes,location=no,resizable=yes,scrollbars=yes,status=yes");
+	});
+
+}
+
+</script>
+
+
+</html>
